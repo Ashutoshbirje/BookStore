@@ -1,0 +1,48 @@
+1) node server.js
+
+// sign up
+2) postman : POST [http://localhost:4000/api/auth/signup]
+3) postman > body > row
+{
+    "email": "user@example.com",
+    "password": "yourPassword123"
+}
+
+// login
+4) postman : POST [http://localhost:4000/api/auth/login]
+5) postman > body > row
+{
+    "email": "user@example.com",
+    "password": "yourPassword123"
+}
+
+// Token
+6) Authrization > Bearer Token > paste Token
+
+// add book
+4) postman : POST [http://localhost:4000/api/books]
+5) postman > body > row
+{
+  "title": "1984",
+  "author": "George Orwell",
+  "genre": "Dystopian",
+  "year": 1950
+}
+
+// show book
+4) postman : GET [http://localhost:4000/api/books]
+
+// Update book
+4) postman : PUT [http://localhost:4000/api/books/:id]
+5) postman > body > row
+{
+  "title": "1984",
+  "author": "George Orwell",
+  "genre": "Dystopian",
+  "year": 1950,
+  "id":1
+}
+
+// DELETE book
+4) postman : DELETE [http://localhost:4000/api/books/:id]
+
